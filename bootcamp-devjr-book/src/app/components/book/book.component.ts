@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Book } from '../../Book';
 
 @Component({
@@ -7,15 +7,11 @@ import { Book } from '../../Book';
   styleUrl: './book.component.css'
 })
 export class BookComponent {
-  book: Book = {
-    id: 1,
-    title: 'Angular',
-    author: 'Filipe Lamego',
-    price: 50.00
-  };
+
+  @Input()
+  book: Book = {} as Book;
 
   
   
-
 
 }
